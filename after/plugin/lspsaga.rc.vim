@@ -47,4 +47,4 @@ nnoremap <silent> <leader>cd <cmd>lua require'lspsaga.diagnostic'.show_line_diag
 " 打开终端
 nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
 " 关闭终端
-tnoremap <silent> <A-c> <C-\><C-n>:Lspsaga close_floaterm<CR>
+tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>

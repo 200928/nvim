@@ -90,7 +90,7 @@ cmp.confirm = function(option)
         if
           e and e.resolved_completion_item and
             (e.resolved_completion_item.kind == 3 or e.resolved_completion_item.kind == 2)
-         then
+        then
           vim.api.nvim_feedkeys(keymap.t("()<Left>"), "n", true)
         end
       end
@@ -116,8 +116,8 @@ cmp.setup {
     end
   },
   mapping = {
-    ["<C-p>"] = cmp.mapping.select_prev_item(),
-    ["<C-n>"] = cmp.mapping.select_next_item(),
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = cmp.mapping.complete(),

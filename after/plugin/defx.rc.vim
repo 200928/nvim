@@ -3,7 +3,8 @@ if !exists('g:loaded_defx') | finish | endif
 "cnoreabbrev sf Defx -listed -new
 "      \ -columns=indent:mark:icon:icons:filename:git:size
 "      \ -buffer-name=tab`tabpagenr()`<CR>
-nnoremap <silent>sf :<C-u>Defx -listed -resume
+"nnoremap <silent>sf :<C-u>Defx -listed -resume
+nnoremap <silent><leader>e :<C-u>Defx -listed -resume
       \ -columns=indent:mark:icon:icons:filename:git:size
       \ -buffer-name=tab`tabpagenr()`
       \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
@@ -11,17 +12,17 @@ nnoremap <silent>sf :<C-u>Defx -listed -resume
 
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
-	  nmap <silent> <leader>e :Defx -columns=indent:icons:filename:type<cr>
+	  "nmap <silent> <leader>e :Defx -columns=indent:icons:filename:type<cr>
 	  " Define mappings
 	  nnoremap <silent><buffer><expr> <CR>
 	  \ defx#do_action('open')
-	  nnoremap <silent><buffer><expr> yy
-	  \ defx#do_action('copy')
-	  nnoremap <silent><buffer><expr> dd
-	  \ defx#do_action('move')
-	  nnoremap <silent><buffer><expr> pp
-	  \ defx#do_action('paste')
-	  nnoremap <silent><buffer><expr> l
+      nnoremap <silent><buffer><expr> yy          
+      \ defx#do_action('copy')                    
+      nnoremap <silent><buffer><expr> dd          
+      \ defx#do_action('move')                    
+      nnoremap <silent><buffer><expr> pp          
+      \ defx#do_action('paste')                   
+      nnoremap <silent><buffer><expr> l           
 	  \ defx#do_action('open')
 	  nnoremap <silent><buffer><expr> <Right>
 	  \ defx#do_action('open')
@@ -69,7 +70,7 @@ autocmd FileType defx call s:defx_my_settings()
 	  nnoremap <silent><buffer><expr> gh
 	  \ defx#do_action('cd')
 	  nnoremap <silent><buffer><expr> gn
-	  \ defx#do_action('cd', ['~/.config/nvim'])
+	  \ defx#do_action('cd', [''])
 	  nnoremap <silent><buffer><expr> q
 	  \ defx#do_action('quit')
 	  nnoremap <silent><buffer><expr> <Space>
@@ -93,9 +94,9 @@ autocmd FileType defx call s:defx_my_settings()
 	endfunction
 
 call defx#custom#column('icon', {
-      \ 'directory_icon': '▸',
-      \ 'opened_icon': '▾',
-      \ 'root_icon': ' ',
+      \ 'directory_icon': '▸ ',
+      \ 'opened_icon': '▾ ',
+      \ 'root_icon': ' ',
       \ })
 
 call defx#custom#option('_', {

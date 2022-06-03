@@ -1,3 +1,4 @@
+nnoremap co <Esc>:w<CR>:!node %<CR>
 "-------------------------------------------------------------------------------
 " yank
 "-------------------------------------------------------------------------------
@@ -9,7 +10,6 @@ map <leader><leader> <ESC>^/<++><CR>:nohlsearch<CR>c5l
 nmap Y y$
 nmap U <C-r>
 "设置vim使用系统剪切板"
-set clipboard=unnamedplus
 nnoremap <silent><leader>, :nohls<CR>
 nnoremap <leader>rc :e ~/.config/nvim/init.vim<CR>
 nnoremap <S-o> o<ESC>
@@ -18,12 +18,12 @@ nnoremap L $
 nnoremap H ^
 
 ""set clipboard^=unnamed,unnamedplus
- ""inoremap ( ()<Esc>i
- ""inoremap [ []<Esc>i
- ""inoremap { {}<Esc>i
- ""inoremap " ""<Esc>i
- ""inoremap ' ''<Esc>i
- ""inoremap ,, <Esc>la
+""inoremap ( ()<Esc>i
+""inoremap [ []<Esc>i
+""inoremap { {}<Esc>i
+""inoremap " ""<Esc>i
+""inoremap ' ''<Esc>i
+""inoremap ,, <Esc>la
 "C-x实现单词拼写更改建议"
 nnoremap <C-x> ea<C-x>s
 inoremap <C-x> <ESC>ea<C-x>s
@@ -94,7 +94,7 @@ noremap <M-Enter> :CocAction<CR>
 inoremap <C-s> <ESC> :w<CR>
 " 代码格式化
 "noremap <leader>f :Format<CR> 
-noremap <leader>f ggvG=<CR> 
+noremap <leader>f ggvG=<CR>
 
 " 强制退出
 map Q :q<CR>
@@ -106,14 +106,16 @@ set iskeyword+=<,>
 iab <h2> <lt>h1> <lt>/h1><esc>5ha
 
 " 全选
-nmap <C-a> gg<S-v>G
+nmap <C-a> ggVG
 " 加/减数字2
-nnoremap n nzz
-nnoremap N Nzz
-""nnoremap + <C-a>
-""nnoremap - <C-x>
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap j jzz
+nnoremap k kzz
+""nnoremap + <C-a>                                                              
+""nnoremap - <C-x>                                                              
 "-------------------------------------------------------------------------------
-" Buffers
+" Buffers                                                                       
 "-------------------------------------------------------------------------------
 " Open current directory
 "nmap te :tabedit

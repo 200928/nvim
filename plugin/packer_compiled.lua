@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["AutoSave.nvim"] = {
+    loaded = true,
+    path = "/home/minghui/.local/share/nvim/site/pack/packer/start/AutoSave.nvim",
+    url = "https://github.com/Pocco81/AutoSave.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/minghui/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -78,6 +83,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/minghui/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
+  },
+  bufexplorer = {
+    loaded = true,
+    path = "/home/minghui/.local/share/nvim/site/pack/packer/start/bufexplorer",
+    url = "https://github.com/lxyoucan/bufexplorer"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -258,6 +268,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/minghui/.local/share/nvim/site/pack/packer/start/vim-snazzy",
     url = "https://github.com/connorholyday/vim-snazzy"
+  },
+  vimcdoc = {
+    loaded = true,
+    path = "/home/minghui/.local/share/nvim/site/pack/packer/start/vimcdoc",
+    url = "https://github.com/yianwillis/vimcdoc"
   }
 }
 

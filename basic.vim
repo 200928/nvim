@@ -1,6 +1,6 @@
 "----vim 个人使用习惯配置start------
 "
-" leader设置成空格
+set clipboard=unnamedplus
 " leader设置成空格
 let mapleader=" "
 "光标行下面始终有5行"
@@ -9,11 +9,13 @@ set scrolloff=5
 
 set encoding=UTF-8
 " 使用鼠标
-set mouse=c
+set mouse=a
 " 显示行号
 set nu
 " 相对行号
 set relativenumber
+"将输入的TAB自动展开成空格。开启后要输入TAB，需要Ctrl-V<TAB>
+set expandtab "用空格代替TAB
 " tab=4个空格
 set tabstop=4
 set shiftwidth=4
@@ -41,17 +43,17 @@ set smartcase
 "----vim 个人使用习惯配置end------
 "ssh 远程粘贴板
 if executable('clipboard-provider')
-    let g:clipboard = {
-          \ 'name': 'myClipboard',
-          \     'copy': {
-          \         '+': 'clipboard-provider copy',
-          \         '*': 'env COPY_PROVIDERS=tmux clipboard-provider copy',
-          \     },
-          \     'paste': {
-          \         '+': 'clipboard-provider paste',
-          \         '*': 'env COPY_PROVIDERS=tmux clipboard-provider paste',
-          \     },
-          \ }
+	let g:clipboard = {
+				\ 'name': 'myClipboard',
+				\     'copy': {
+					\         '+': 'clipboard-provider copy',
+					\         '*': 'env COPY_PROVIDERS=tmux clipboard-provider copy',
+					\     },
+					\     'paste': {
+						\         '+': 'clipboard-provider paste',
+						\         '*': 'env COPY_PROVIDERS=tmux clipboard-provider paste',
+						\     },
+						\ }
 endif
 "随机选一个颜色风格
 function RandomColorScheme()
@@ -71,14 +73,11 @@ endfunction
 " set filetypes as typescriptreact
 autocmd BufNewFile,BufRead *.tsx,*.jsx,*.js set filetype=typescriptreact
 
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 "打开缩进线
-"将输入的TAB自动展开成空格。开启后要输入TAB，需要Ctrl-V<TAB>
- "set expandtab
  ""使用每层缩进的空格数
  "set shiftwidth=4
- ""编辑时一个TAB字符占多少个空格的位置
- "set tabstop=4
  ""方便在开启了et后使用退格（backspace）键，每次退格将删除X个空格
  "set softtabstop=4
  "" 使回格键（backspace）正常处理indent(缩进位置), eol(行结束符), start(段首), 很奇怪 Vim 默认竟然不允许在这些地方使用 backspace
