@@ -244,10 +244,30 @@ _G.packer_plugins = {
     path = "/home/minghui/.local/share/nvim/site/pack/packer/start/space-vim-theme",
     url = "https://github.com/liuchengxu/space-vim-theme"
   },
+  ["telescope-dap.nvim"] = {
+    loaded = true,
+    path = "/home/minghui/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/minghui/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-live-grep-args.nvim"] = {
+    loaded = true,
+    path = "/home/minghui/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
+    url = "https://github.com/nvim-telescope/telescope-live-grep-args.nvim"
+  },
+  ["telescope-rg.nvim"] = {
+    loaded = true,
+    path = "/home/minghui/.local/share/nvim/site/pack/packer/start/telescope-rg.nvim",
+    url = "https://github.com/nvim-telescope/telescope-rg.nvim"
+  },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/home/minghui/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -263,6 +283,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/minghui/.local/share/nvim/site/pack/packer/start/vim-colorschemes",
     url = "https://github.com/flazz/vim-colorschemes"
+  },
+  ["vim-one"] = {
+    loaded = true,
+    path = "/home/minghui/.local/share/nvim/site/pack/packer/start/vim-one",
+    url = "https://github.com/rakr/vim-one"
   },
   ["vim-snazzy"] = {
     loaded = true,

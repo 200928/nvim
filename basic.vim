@@ -5,7 +5,7 @@ set clipboard=unnamedplus
 let mapleader=" "
 "光标行下面始终有5行"
 "
-set scrolloff=5
+set scrolloff=10
 
 set encoding=UTF-8
 " 使用鼠标

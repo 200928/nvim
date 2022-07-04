@@ -94,7 +94,8 @@ return require('packer').startup({
         -- 基于neovim 内置lsp 的轻量级lsp 插件，具有高性能UI。非常酷
         use 'rinx/lspsaga.nvim'
 
-        -- 文件搜索 预览 等
+        -- Telescope
+        use "nvim-telescope/telescope-live-grep-args.nvim"
         use {
             "nvim-telescope/telescope.nvim",
             requires = {
@@ -102,6 +103,11 @@ return require('packer').startup({
                 "kyazdani42/nvim-web-devicons"
             }
         }
+        use "nvim-telescope/telescope-ui-select.nvim"
+        use "nvim-telescope/telescope-rg.nvim"
+        -- use "MattesGroeger/vim-bookmarks"
+        -- use "tom-anders/telescope-vim-bookmarks.nvim"
+        use "nvim-telescope/telescope-dap.nvim"
         -- 加速文件搜索速度,如果安装失败需要到插件目录执行make命令手动编译
         -- 用了这个插件以后，貌似更快了(感觉输入更跟手了，可能是心理作用)。但是对于我的小项目感受不是很明显
         use {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}

@@ -110,8 +110,8 @@ nmap <C-a> ggVG
 " 加/减数字2
 nnoremap n nzzzv
 nnoremap N Nzzzv
-nnoremap j jzz
-nnoremap k kzz
+"nnoremap j jzz
+"nnoremap k kzz
 ""nnoremap + <C-a>                                                              
 ""nnoremap - <C-x>                                                              
 "-------------------------------------------------------------------------------

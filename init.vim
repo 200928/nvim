@@ -28,10 +28,10 @@ source ~/.config/nvim/after/plugin/rainbow.rc.vim
 " 主题配置
 " 设置全局颜色
 set background=dark
+"set background=light
+"-------------------------------------
 "source ~/.config/nvim/colors/gruvbox_material.rc.vim
 "source ~/.config/nvim/colors/lightline.vim
-"-------------------------------------
-"colorscheme space_vim_theme
 "-------------------------------------
 colorscheme snazzy
 let g:SnazzyTransparent = 1 "透明度
@@ -40,14 +40,11 @@ let g:SnazzyTransparent = 1 "透明度
 "-------------------------------------
 "colorscheme gruvbox
 "-------------------------------------
-"
 "let g:airline_theme='one'
 "let g:one_allow_italics = 1 " I love italic for comments
 "colorscheme one
-
 "-------------------------------------
-"
-"
+" 输入法
 autocmd InsertEnter * :silent !fcitx5-remote -o
 autocmd InsertLeave * :silent !fcitx5-remote -o
 autocmd BufCreate *  :silent !fcitx5-remote -o
